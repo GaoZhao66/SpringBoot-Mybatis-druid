@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cnooc.dao.TFileDao">
+
+    <!--<resultMap id="BaseResultMap" type="com.cnooc.entity.TFile">-->
+        <!--<id column="id" jdbcType="INTEGER" property="id" />-->
+        <!--<result column="type" jdbcType="VARCHAR" property="type" />-->
+        <!--<result column="name" jdbcType="VARCHAR" property="name" />-->
+        <!--<result column="address" jdbcType="VARCHAR" property="address" />-->
+        <!--<result column="haxi" jdbcType="VARCHAR" property="haxi" />-->
+        <!--<result column="create_time" jdbcType="VARCHAR" property="createTime" />-->
+    <!--</resultMap>-->
+
+    <insert id="insert" parameterType="com.cnooc.entity.TFile">
+        insert into t_file_test (id, type, name,
+        address, haxi, create_time
+        )
+        values (#{id,jdbcType=INTEGER}, #{type,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR},
+        #{address,jdbcType=VARCHAR}, #{haxi,jdbcType=VARCHAR}, #{createTime,jdbcType=VARCHAR}
+        )
+    </insert>
+
+</mapper>
